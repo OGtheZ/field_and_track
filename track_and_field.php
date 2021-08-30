@@ -4,6 +4,10 @@ $runningTrack = ['_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_'];
 $stadium = [];
 
 $playerCount = (int) readline("Please enter player count: ");
+if (!is_numeric($playerCount) || $playerCount < 1 || $playerCount > 5) {
+    echo "Enter a valid player count, 1-5!" . PHP_EOL;
+    exit;
+}
 $possiblePlayers = ["X", "@", "&", "#", "$"];
 $players = [];
 
